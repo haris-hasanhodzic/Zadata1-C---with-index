@@ -57,8 +57,8 @@ int main(int argc, char* argv[])
          "ID INT PRIMARY KEY     NOT NULL," \
          "from_ip        INT    NOT NULL,"
          "to_ip        INT    NOT NULL);"
-           "CREATE INDEX from_ip_ind ON networks(from_ip);"
-           "CREATE INDEX to_ip_ind ON networks(to_ip);";
+           "CREATE INDEX from_ip_ind ON networks(from_ip);";
+          // "CREATE INDEX to_ip_ind ON networks(to_ip);";
 
    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
    if( rc != SQLITE_OK ){
